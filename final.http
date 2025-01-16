@@ -1,0 +1,125 @@
+//@final_HostAddress = https://localhost:7078
+@final_HostAddress = http://localhost:5049
+
+GET {{final_HostAddress}}/weatherforecast/
+Accept: application/json
+Authorization: Bearer CfDJ8Gi0v93tbgdFkryyGR2g6y6PJ4tG6grwVl7YDEM6bRnc1D5HyMaadSqV_gX47edzPJaZIUreTr2tzRFcI5JhvRjfS0-CzQ4Etmz43a-069wQtjhGmye_XxH3Qo3Tpnzt1GQ9jFHdtuhH1KEs0mJ-7bsF_ydJa0t9oFbsfUu2Bph-ZqXceY9AQwWcsUDxNEC-WNxT0A_pficilfqQh9VijouzBd8DC21bjfRdr0NXInwa898m7Tuha6xe4k3jaNwo8n7jpY42mnJ4dNwE2nkhy3TCbIrtSD8720cIM3AXSvzTVwj5cBhIXfW7lKm4Gv7vUS9fw8HgtO3JqYn9jPvMxJHmpIBiCSVt73kYgrPOfqHPo9QBoXIavxqEaRJRqBm4hlGOI_e3D47mjdzH8t7pEJfL226zQEjFPTWbIy25WjXc76saObdJopRh5xy7VGuF7q_yDXlGxNh8tcWByu4z-DAWd7MznSQCDXXZMZfjbho0WI9ixboxni7lqpNg5hj-BrLXxOoi0Y8r8qo13e7D_bItZ6QAzRgks_fytCpIcrBPD8v4-201ywmfXgrqkkUI5ec3vetwVHKPfsAkJPsNKutihLAsoK7RKngpY0Q7VR-FM-KxdgMOQF8pqJ5MmxdYDJpk9uLVcrx_TB0R9DWp10RGeefppKVyC92QS0wAKrbaLqpbYGyu3iKTs4rPnAjZFw
+
+
+###
+
+GET {{final_HostAddress}}/api/products
+Accept: application/json
+
+###
+
+GET {{final_HostAddress}}/api/orderproduct
+Accept: application/json
+
+###
+
+GET {{final_HostAddress}}/api/Products/1
+Accept: application/json
+
+###
+
+GET {{final_HostAddress}}/api/Category/2
+Accept: application/json
+
+
+###
+POST {{final_HostAddress}}/account/register/
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "dan@dan.com",
+    "password": "danVAN_123"
+}
+
+###
+POST {{final_HostAddress}}/account/login/
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "dan@dan.com",
+    "password": "danVAN_123"
+}
+
+
+###
+POST {{final_HostAddress}}/account/refresh/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "refreshToken": "CfDJ8Gi0v93tbgdFkryyGR2g6y6jRWzSjP0Ve-T-20XWfeYBtd5xIEA97bDa4Ob1QMUw05prxznMObRqIzHrHSUWttUlj3vztSOUORVyE8TrVa1Wt2Aewq6qJGAKM0T6IUE71jrmRWA4MmobiI9_xvWfDcwCFCK7B3jOySFPVDJbPwRE_jLr_3jriMnAp4LzyR8KVYPgC4tQNAcULMbU06VLcphTmZHqPp1UsLhroUMa_G_JOBgb3k84Abq81Q2VYkPgFuZ-LqhLO9V-cImKGZ67MHsdIpqw0M6cEsmcKBWt6KhX9GFf5-LDrYTilhO-7CZAzZ9F78MD4g1T62xwbO3m2B5LRUayi9XqlPwGsPsDfh-8KhBckFO6bkARajv_eY4xoPa23bmrA6GV-6dNEcL-u5YEwV1eqtjglfiPUEV1MSiXH2ACOt9e2YlZ5ux_UYzWyjiBKyO12Zp1Kv3l8ILQmaMlQLqDS4ICCbWjGLIiYSeGA1yGGRxJtv9bwjSVNsI0dmwz5feJQBGsQ-oVtfILpg8jI10ebTM3KxPQteOjzfVkqaG6oIuYBw8wPjFqH4UO8iM59Kr1-Qixo9nOmOvmMx0Xv9ra5QDz_gd32irVe1XkWOgUXxBk_eD62B1AdIBA1fM9v5Sitb4548uWMJfNG1fr5a-8hn3qY_X2w7YxT2_qvN1Q5by4d23DjlLBIKKDpA"
+}
+
+
+###
+POST {{final_HostAddress}}/api/CustomerNoLogin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "firstName": "string",
+  "lastName": "string",
+  "email": "string",
+  "street": "string",
+  "zipcode": "string",
+  "city": "string"
+}
+
+
+{
+  "customerId": 0,
+  "date": "2025-01-09T18:11:52.372Z",
+  "customer": {
+    "firstName": "string",
+    "lastName": "string",
+    "email": "string",
+    "street": "string",
+    "zipcode": "string",
+    "city": "string"
+  }
+}
+
+###
+POST {{final_HostAddress}}/api/OrderNoLogin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "customer": {
+      "firstName": "Emma",
+      "lastName": "Svensson",
+      "email": "tan@tan.com",
+      "street": "Stensjötan 20",
+      "zipcode": "21765",
+      "city": "Malmö"
+  },
+  "products": [
+    {
+      "id": 1,
+      "quantity": 4
+    },
+    {
+      "id": 3,
+      "quantity": 2
+    }
+  ]
+}
+
+
+###
+GET {{final_HostAddress}}/api/OrderNoLogin
+Accept: application/json
+Authorization: Bearer CfDJ8Gi0v93tbgdFkryyGR2g6y70Cr433XPHK_MsRPehFwTBOdfZR_D8uSGOSsb63TuMpDtD1Wzpk4SyPmzpi4y_8bQvBfdYKv_4zwkUMfBP2_4D_wzSR1E4S-RKmAr-xgAmHCwiOXMtHfMnXwgSMBNcM1eUOQQoR7e2krWIexekE_StJqz07mJa_TTlzViT6z0x9eQbif8s52PZ2bW3nAD3YWVUF7_BaHrRP5GlckIFRmGmEEoVA-how2PCuCLRdvO7BSEqNZlrvktKWmFrhInvs3LTzbNKKgZOHqy3JhTFfgSf6K2jqDozkipto9hpwxNqX9r8rEHLLVlfIWC2EpSg2Hwoj-lYoOa7Ro66ewH4poKsc-Z6oh4WWY51aitJjPk_kPiyI8R-jk9xM3jO8PMd-m3fVtZeFR4RvSFBN5b90zMnlproDPSlMQcgt42aoQyp7wqb0DqDHwYgRGjI74CVi9zen5snKpYt6_E_VurQcI0rjvSizAtdm1gLexmMfOnZ8c0iVAxyIsv89BICCvUGk_2ObFo4Ak2oKInyRZQkdkgd0EtE_cz4ElV7QocDH8QeWYwlD3jsMcX0rL_CPhiYUEmuHepdo17iukB1bhaMSo-KmLQV4IB90GCnzRImU0916uun_iJsvxHRBV-pU5R1Ink9pzpu2PO5iYsSiOzUjHjVtcSMm1anMabJltb93L3VBg
+
+
+###
+GET {{final_HostAddress}}/api/CustomerNoLogin
+Accept: application/json
+Content-Type: application/json
